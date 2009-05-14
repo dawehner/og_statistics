@@ -15,7 +15,7 @@ function og_statistics_nodeapi(&$node, $op, $teaser = NULL, $page = NULL) {
       if (og_is_group_type($node->type)) {
         og_statistics_write_pure_record($node->nid);
       }
-      else if (og_is_group_post_type($node->type)) {
+      elseif (og_is_group_post_type($node->type)) {
         if (isset($node->og_groups)) {
           $node->og_groups = array_unique($node->og_groups);
           foreach ($node->og_groups as $gid) {
@@ -29,7 +29,7 @@ function og_statistics_nodeapi(&$node, $op, $teaser = NULL, $page = NULL) {
       if (og_is_group_type($node->type)) {
         og_statistics_delete_record($node);
       }
-      else if (og_is_group_post_type($node->type)) {
+      elseif (og_is_group_post_type($node->type)) {
         if (isset($node->og_groups)) {
           $node->og_groups = array_unique($node->og_groups);
           foreach ($node->og_groups as $gid) {

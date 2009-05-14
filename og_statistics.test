@@ -1,6 +1,10 @@
 <?php
 // $Id$
 
+/**
+ * Test file for og_statitics.
+ */
+
 require_once drupal_get_path('module', 'og') .'/tests/og_testcase.php';
 
 class OgStatisticsTestCase extends OgTestCase {
